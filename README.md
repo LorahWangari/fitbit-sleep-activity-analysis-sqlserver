@@ -1,5 +1,40 @@
 # fitbit-sleep-activity-analysis-sqlserver
-A real-world SQL data analysis project combining fitness and sleep data to generate lifestyle insights.
+
+## Overview
+A real-world SQL data analysis project combining fitness and sleep data to generate lifestyle insights. 
+
+
+## Process
+- Imported 18 CSV files into SQL Server.
+- Created relational tables and views for activity and sleep data.
+- Cleaned and validated data.
+- Ran analytical SQL queries for behavioral insights.
+
+## Final Insights from Fitbit Fitness & Sleep Data Analysis
+Analyzing Fitbit data in SQL Server revealed some interesting behavioral patterns about activity levels, sleep duration and sleep efficiency across users.
+
+Overall, there’s a positive relationship between physical activity and sleep quality — users who were more active during the day generally experienced more efficient sleep at night. 
+However, this wasn’t universal. A few users with lower daily steps still had excellent sleep efficiency, suggesting that consistent sleep schedules and recovery habits can sometimes 
+outweigh raw activity levels.
+
+The data also showed how sleep consistency plays a critical role in sleep quality. Users whose total minutes asleep stayed relatively steady from day to day achieved 
+higher sleep efficiency compared to those with irregular sleep patterns. This points to a strong connection between routine and rest. Maintaining a predictable sleep schedule seems 
+more beneficial than simply sleeping longer hours.
+
+When comparing weekdays and weekends, a clear difference emerged. Sleep duration tended to increase on weekends, likely as users caught up on rest, but sleep efficiency slightly dropped. 
+Longer time in bed didn’t always translate into better rest. This reflects how inconsistent bedtime patterns or “social jet lag” can reduce overall sleep effectiveness, 
+even when total sleep time goes up.
+
+There was also a moderate positive relationship between calories burned and sleep efficiency. Users with higher average calorie expenditure, a sign of daily physical activity,
+tended to have slightly better sleep quality. It supports the idea that balanced daily movement helps promote restorative sleep, but too much variation or excessive exertion can have 
+diminishing returns.
+
+Across all observations, a consistent theme emerged: balance and consistency matter most. Users who kept steady sleep habits, maintained regular physical activity 
+and avoided large fluctuations in either area showed the highest sleep efficiency overall.
+
+This project demonstrated how structured SQL analysis can uncover meaningful health insights from wearable data. Connecting numbers to real-world lifestyle behaviors.
+
+
 
 CREATE DATABASE FitbitProject;
 
@@ -478,31 +513,3 @@ ORDER BY
         WHEN DATENAME(WEEKDAY, RecordDate) = 'Saturday' THEN 6
         WHEN DATENAME(WEEKDAY, RecordDate) = 'Sunday' THEN 7
     END;   -- Users sleep longer on weekends, often catching up on rest missed during the week
-
-
-
-
-Final Insights from Fitbit Fitness & Sleep Data Analysis
-
-Analyzing Fitbit data in SQL Server revealed some interesting behavioral patterns about activity levels, sleep duration and sleep efficiency across users.
-
-Overall, there’s a positive relationship between physical activity and sleep quality — users who were more active during the day generally experienced more efficient sleep at night. 
-However, this wasn’t universal. A few users with lower daily steps still had excellent sleep efficiency, suggesting that consistent sleep schedules and recovery habits can sometimes 
-outweigh raw activity levels.
-
-The data also showed how sleep consistency plays a critical role in sleep quality. Users whose total minutes asleep stayed relatively steady from day to day achieved 
-higher sleep efficiency compared to those with irregular sleep patterns. This points to a strong connection between routine and rest. Maintaining a predictable sleep schedule seems 
-more beneficial than simply sleeping longer hours.
-
-When comparing weekdays and weekends, a clear difference emerged. Sleep duration tended to increase on weekends, likely as users caught up on rest, but sleep efficiency slightly dropped. 
-Longer time in bed didn’t always translate into better rest. This reflects how inconsistent bedtime patterns or “social jet lag” can reduce overall sleep effectiveness, 
-even when total sleep time goes up.
-
-There was also a moderate positive relationship between calories burned and sleep efficiency. Users with higher average calorie expenditure, a sign of daily physical activity,
-tended to have slightly better sleep quality. It supports the idea that balanced daily movement helps promote restorative sleep, but too much variation or excessive exertion can have 
-diminishing returns.
-
-Across all observations, a consistent theme emerged: balance and consistency matter most. Users who kept steady sleep habits, maintained regular physical activity 
-and avoided large fluctuations in either area showed the highest sleep efficiency overall.
-
-This project demonstrated how structured SQL analysis can uncover meaningful health insights from wearable data. Connecting numbers to real-world lifestyle behaviors.
