@@ -34,7 +34,7 @@ and avoided large fluctuations in either area showed the highest sleep efficienc
 
 This project demonstrated how structured SQL analysis can uncover meaningful health insights from wearable data. Connecting numbers to real-world lifestyle behaviors.
 
-
+## The Structure
 
 CREATE DATABASE FitbitProject;
 
